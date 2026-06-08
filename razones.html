@@ -14,19 +14,19 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-    font-family:'Poppins',sans-serif;
     background:linear-gradient(
         135deg,
-        #071A35,
-        #132D5A,
-        #7A1F2B
+        #0A2342,
+        #1E3A5F,
+        #D72638
     );
     color:white;
     min-height:100vh;
-    overflow-x:hidden;
+
 }
 
 header{
@@ -34,10 +34,10 @@ header{
     top:0;
     left:0;
     width:100%;
+    z-index:1000;
     background:rgba(7,26,53,.85);
     backdrop-filter:blur(15px);
     border-bottom:1px solid rgba(255,255,255,.08);
-    z-index:1000;
 }
 
 nav{
@@ -60,15 +60,26 @@ nav ul{
     gap:30px;
 }
 
-nav a{
+nav ul li a{
     color:white;
     text-decoration:none;
+    position:relative;
     transition:.3s;
 }
 
-nav a:hover{
-    color:#FFD166;
+nav ul li a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    height:2px;
+    background:#FFD166;
+    transition:.3s;
 }
+
+nav ul li a:hover::after{
+    width:100%;
 }.titulo{
     text-align:center;
     max-width:900px;
@@ -125,7 +136,7 @@ nav a:hover{
 <header>
     <nav>
 
-
+        <div class="logo">100 Ra</div>
 
         <ul>
 	    <li><a href="si.html">Inicio</a></li>
