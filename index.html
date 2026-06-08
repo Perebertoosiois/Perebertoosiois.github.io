@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>¿Quieres ser mi novia?</title>
+<title>Siono</title>
 
 <style>
 
@@ -19,50 +19,53 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    background:linear-gradient(
-    135deg,
-    #000000,
-    #081b44,
-    #8b0000
-    );
-    overflow:hidden;
+    background:
+        radial-gradient(circle at top left,#8b0000 0%,transparent 40%),
+        radial-gradient(circle at bottom right,#081b44 0%,transparent 40%),
+        linear-gradient(135deg,#000000,#081b44,#8b0000);
+    overflow-y:auto;
+    padding:20px 0;
 }
 
 .container{
     text-align:center;
     color:white;
-    max-width:900px;
-    padding:30px;
+    max-width:1100px;
+    width:90%;
+    padding:50px;
     animation:fadeIn 1.2s ease;
 }
 
 h1{
-    font-size:3rem;
-    margin-bottom:20px;
-    text-shadow:0 0 15px rgba(255,255,255,.4);
+font-size:clamp(2rem,5vw,3.5rem);
+    margin-bottom:30px;
+    line-height:1.2;
+    text-shadow:0 0 20px rgba(255,255,255,.3);
 }
 
 p{
-    font-size:1.2rem;
-    margin-bottom:25px;
-    color:#e0e0e0;
+    font-size:1.35rem;
+    margin-bottom:40px;
+    color:#f0f0f0;
 }
 
 .imagen{
-    width:300px;
-    height:300px;
+    width:min(380px,60vw,40vh);
+    height:min(380px,60vw,40vh);
     object-fit:cover;
-    border-radius:25px;
-    border:4px solid white;
-    box-shadow:0 0 30px rgba(255,255,255,.4);
+    border-radius:30px;
+    border:4px solid rgba(255,255,255,.8);
+    box-shadow:
+        0 0 40px rgba(255,255,255,.15),
+        0 0 80px rgba(255,0,80,.15);
     margin-bottom:35px;
-    animation:float 3s ease-in-out infinite;
+    animation:float 4s ease-in-out infinite;
 }
 
 .botones{
     display:flex;
     justify-content:center;
-    gap:25px;
+    gap:40px;
     flex-wrap:wrap;
 }
 
@@ -73,29 +76,26 @@ button{
 }
 
 #si{
-    background:linear-gradient(45deg,#ff1e56,#ff5f6d);
+    background:linear-gradient(45deg,#ff004c,#ff6b81);
     color:white;
-    font-size:24px;
-    padding:18px 55px;
-    border-radius:15px;
-    box-shadow:0 0 20px rgba(255,0,80,.5);
-}
-
-#si:hover{
-    transform:scale(1.08);
+    font-size:26px;
+    padding:20px 65px;
+    border-radius:18px;
+    box-shadow:0 0 25px rgba(255,0,80,.45);
 }
 
 #no{
-    background:linear-gradient(45deg,#0f3460,#4ea8ff);
+    background:linear-gradient(45deg,#123c75,#4ea8ff);
     color:white;
-    font-size:24px;
-    padding:18px 55px;
-    border-radius:15px;
-    box-shadow:0 0 20px rgba(0,140,255,.5);
+    font-size:26px;
+    padding:20px 65px;
+    border-radius:18px;
+    box-shadow:0 0 25px rgba(0,140,255,.35);
 }
 
+#si:hover,
 #no:hover{
-    transform:scale(1.08);
+    transform:translateY(-5px) scale(1.05);
 }
 
 @keyframes fadeIn{
@@ -141,6 +141,47 @@ button{
     }
 }
 
+/* RESPONSIVE PARA CELULAR */
+
+@media (max-width:768px){
+
+    body{
+        overflow-y:auto;
+    }
+
+    .container{
+        width:95%;
+        padding:25px;
+    }
+
+    h1{
+        font-size:2.2rem;
+        margin-bottom:20px;
+    }
+
+    p{
+        font-size:1.05rem;
+        margin-bottom:25px;
+    }
+
+    .imagen{
+        width:70vw;
+        height:70vw;
+        margin-bottom:35px;
+    }
+
+    .botones{
+        gap:15px;
+    }
+
+    #si,
+    #no{
+        font-size:18px;
+        padding:15px 35px;
+    }
+
+}
+
 </style>
 </head>
 <body>
@@ -152,7 +193,7 @@ button{
     <h1>Esto es un regalito para ti, con mucho cariño</h1>
 
     <p>
-        Quieres verlo? (pon que no)
+        ¿Quieres verlo? (pon que no)
     </p>
 
     <img
@@ -181,13 +222,20 @@ botonNo.addEventListener("click", () => {
     botonSi.style.transform = `scale(${escala})`;
 
     if(escala >= 8){
+
         botonSi.style.position = "fixed";
         botonSi.style.top = "0";
         botonSi.style.left = "0";
         botonSi.style.width = "100vw";
         botonSi.style.height = "100vh";
         botonSi.style.borderRadius = "0";
-        botonSi.style.fontSize = "70px";
+
+        if(window.innerWidth <= 768){
+            botonSi.style.fontSize = "40px";
+        }else{
+            botonSi.style.fontSize = "70px";
+        }
+
         botonSi.style.transform = "none";
         botonSi.innerHTML = "SÍ ❤️";
         botonNo.style.display = "none";
@@ -198,7 +246,6 @@ botonNo.addEventListener("click", () => {
 botonSi.addEventListener("click", () => {
     window.location.href = "si.html";
 });
-
 
 const corazones = document.querySelector(".corazones");
 
