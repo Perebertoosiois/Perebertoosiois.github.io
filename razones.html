@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Razones</title>
+<title>100 Razones para Amarte</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -17,52 +17,60 @@
     font-family:'Poppins',sans-serif;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     background:linear-gradient(
         135deg,
         #0A2342,
         #1E3A5F,
-        #D72638
+        #102A54
     );
     color:white;
     min-height:100vh;
-
+    overflow-x:hidden;
 }
 
+/* =========================
+   HEADER
+========================= */
+
 header{
-    position:relative;
-    top:0;
-    left:0;
     width:100%;
-    z-index:1000;
     background:rgba(7,26,53,.85);
     backdrop-filter:blur(15px);
     border-bottom:1px solid rgba(255,255,255,.08);
+    text-align:center;
+}
+
+.titulo-header{
+    font-size:3.2rem;
+    font-weight:700;
+    color:white;
+    padding:30px 20px 20px;
 }
 
 nav{
     max-width:1400px;
     margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 40px;
-}
-
-.logo{
-    font-size:1.5rem;
-    font-weight:700;
+    padding:0 20px 25px;
 }
 
 nav ul{
     display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:35px;
+    flex-wrap:wrap;
     list-style:none;
-    gap:30px;
 }
 
 nav ul li a{
     color:white;
     text-decoration:none;
+    font-size:1.1rem;
     position:relative;
     transition:.3s;
 }
@@ -80,33 +88,46 @@ nav ul li a::after{
 
 nav ul li a:hover::after{
     width:100%;
-}.titulo{
-    text-align:center;
+}
+
+/* =========================
+   TITULO PRINCIPAL
+========================= */
+
+.titulo{
     max-width:900px;
     margin:auto;
-    margin-bottom:60px;
+    text-align:center;
+    padding:80px 20px 60px;
 }
 
 .titulo h1{
-    font-size:3.5rem;
-    margin-bottom:20px;
+    font-size:5rem;
+    font-weight:700;
+    margin-bottom:25px;
 }
 
 .titulo p{
+    font-size:1.3rem;
     line-height:1.8;
     opacity:.9;
 }
 
+/* =========================
+   GRID DE RAZONES
+========================= */
+
 .grid{
     max-width:1400px;
     margin:auto;
+    padding:0 20px 80px;
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:25px;
 }
 
 .razon{
-    background:rgba(255,255,255,.1);
+    background:rgba(255,255,255,.10);
     backdrop-filter:blur(15px);
     border:1px solid rgba(255,255,255,.15);
     border-radius:25px;
@@ -121,33 +142,105 @@ nav ul li a:hover::after{
 
 .numero{
     color:#FFD166;
-    font-size:1.4rem;
+    font-size:1.5rem;
     font-weight:700;
-    margin-bottom:10px;
+    margin-bottom:15px;
 }
 
 .texto{
     line-height:1.8;
+    font-size:1.05rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .titulo-header{
+        font-size:2.8rem;
+        padding-top:25px;
+    }
+
+    nav ul{
+        gap:18px 28px;
+    }
+
+    nav ul li a{
+        font-size:1.1rem;
+    }
+
+    .titulo{
+        padding:60px 20px 40px;
+    }
+
+    .titulo h1{
+        font-size:4rem;
+        line-height:1.1;
+    }
+
+    .titulo p{
+        font-size:1.2rem;
+    }
+
+    .grid{
+        padding:0 15px 60px;
+    }
+
+    .razon{
+        padding:30px;
+        border-radius:22px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .titulo-header{
+        font-size:2.4rem;
+    }
+
+    nav ul{
+        flex-direction:row;
+        justify-content:center;
+        gap:15px 20px;
+    }
+
+    nav ul li a{
+        font-size:1rem;
+    }
+
+    .titulo h1{
+        font-size:3.5rem;
+    }
+
+    .titulo p{
+        font-size:1.1rem;
+    }
+
 }
 
 </style>
 </head>
+
 <body>
+
 <header>
+
+    <div class="titulo-header">
+        100 Razones
+    </div>
+
     <nav>
-
-        <div class="logo">100 Ra</div>
-
         <ul>
-	    <li><a href="si.html">Inicio</a></li>
+            <li><a href="si.html">Inicio</a></li>
             <li><a href="comienzo.html">Nuestro Comienzo</a></li>
             <li><a href="razones.html">Razones</a></li>
             <li><a href="carta.html">Cartita</a></li>
-
         </ul>
-
-
     </nav>
+
 </header>
 
 <div class="titulo">
