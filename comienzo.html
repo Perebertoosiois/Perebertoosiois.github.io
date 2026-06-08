@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>El Comienzo de Nuestra Historia ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(
+    135deg,
+    #071A35,
+    #102A54,
+    #1F4E79
+    );
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ENCABEZADO */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(7,26,53,.85);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+nav{
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    position:relative;
+    transition:.3s;
+}
+
+nav ul li a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    height:2px;
+    background:#FFD166;
+    transition:.3s;
+}
+
+nav ul li a:hover::after{
+    width:100%;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:150px 20px 100px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:4.5rem;
+    margin-bottom:20px;
+    color:#FFD166;
+}
+
+.hero p{
+    font-size:1.3rem;
+    opacity:.9;
+}
+
+/* CONTENIDO */
+
+.contenedor{
+    max-width:950px;
+    margin:auto;
+    padding:0 25px 100px;
+}
+
+.bloque{
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:25px;
+    padding:50px;
+    margin-bottom:40px;
+    line-height:2;
+    animation:aparecer 1s ease;
+}
+
+.bloque h2{
+    color:#FFD166;
+    margin-bottom:20px;
+    font-size:2rem;
+}
+
+.bloque p{
+    margin-bottom:18px;
+}
+
+/* IMAGEN */
+
+.imagen{
+    margin:60px 0;
+    overflow:hidden;
+    border-radius:25px;
+    box-shadow:0 10px 40px rgba(0,0,0,.25);
+}
+
+.imagen img{
+    width:100%;
+    display:block;
+    transition:1s;
+}
+
+.imagen:hover img{
+    transform:scale(1.05);
+}
+
+/* FRASE */
+
+.frase{
+    text-align:center;
+    font-size:2rem;
+    color:#FFD166;
+    font-style:italic;
+    margin:80px 0;
+    line-height:1.7;
+}
+
+/* ESTRELLAS */
+
+.estrella{
+    position:fixed;
+    color:rgba(255,209,102,.15);
+    pointer-events:none;
+    animation:subir linear infinite;
+}
+
+@keyframes subir{
+    from{
+        transform:translateY(110vh);
+    }
+    to{
+        transform:translateY(-100px);
+    }
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+footer{
+    text-align:center;
+    padding:80px 20px;
+    color:rgba(255,255,255,.7);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .bloque{
+        padding:30px;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+
+        <div class="logo">Nuestro Comienzo</div>
+
+        <ul>
+	    <li><a href="si.html">Inicio</a></li>
+            <li><a href="comienzo.html">Nuestro Comienzo</a></li>
+            <li><a href="razones.html">Razones</a></li>
+            <li><a href="carta.html">Cartita</a></li>
+
+        </ul>
+
+
+    </nav>
+</header>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>El Comienzo de Nuestra Historia </h1>
+	<h2 style="color: #FCE6AE;"> Desde mi perspectiva </h2>
+
+        <p>
+            Toda historia tiene un inicio.
+            Esta es la parte donde comenzó la nuestra.
+        </p>
+
+    </div>
+
+</section>
+
+<div class="contenedor">
+
+    <div class="bloque">
+
+        <h2>Todo comenzó sin saberlo (Y por accidente)</h2>
+
+        <p>
+Todo comenzo desde que me meti al clan por asares del destino, sin razon alguna este clan me llamo la atencion y pues quise probar suerte de que habia, y sobre todo queria conocer mas gente, gente en la cual evidentemente estabas tu, y desde que escuche tu voz hubo algo que me llamo la atencion, no se si fue lo linda que es, o la seguridad que tienes en ella, pero algo sin duda alguna me atrapo al escucharla al instante </p> 
+        <p> Paso el tiempo en mi instancia en el clan, y cada vez me gustaba mas, por la gente, pero sobre todo por ti, porque casi siempre era entrar a VC y escuchar solo tu voz, esa era la unica razon por la cual me metia, porque me gustaste desde minuto 1, y solo queria hablar contigo, aunque no tenia el valor de hablarte directamente a ti, pero queria hacerlo de alguna manera </p>
+<p> Y fue Gracias a Dami que empezo todo, desde ese momento en el cual me dijo que si andaria contigo, obviamente mi respuesta era si, pero no queria hacer tan evidentes mis sentimientos por ti tan rapido, asi que solo dije que podria, pero yo sabia que era un si rotundo, porque solo pasabas por mi cabeza en muchos momentos, de mi dia, pero yo queria que mejor fueras parte de ella, y fue asi como empezo todo, gracias a unos cuantos mensajes, fue como empezo nuestra pequeña, pero sin fin historia de amor
+
+    </div>
+
+    <div class="imagen">
+        <img src="https://i.pinimg.com/736x/bd/63/ed/bd63ed73689798e5e36d7577a098d1d1.jpg" alt="Recuerdo">
+    </div>
+
+    <div class="bloque">
+
+        <h2>Los primeros momentos</h2>
+
+        <p> Empezamos a hablar por mensaje privado, y no sabes como tenia mi cara de imbecil cada que hablaba contigo, cosa que aun sigue pasando, cada que llegaba un mensaje tuyo me ponia nervioso, cosa que sigue pasando aun, y solo esperaba el tiempo para recibir tu proximo mensaje, cosa que aun sigo haciendo, porque a pesar del tiempo me sigo sintiendo como si fuera nuestro primer dia de conocernos, porque aun me sigo poniendo nervioso cada que recibo una llamada tuya o un mensaje tuyo, porque es lo unico que me gusta del dia, el hablar contigo, desvelarme hasta no mas poder hablando contigo, a pesar de que se que al diga siguiente estare como muerto viviente, se que valio totalmente la pena, porque fue por estar con tu compañia. </p>
+<p> Hablabamos y cada vez te conocia mejor, pero yo queria saber absolutamente todo de ti, hasta el mas minimo detalle de ti queria saberlo, porque quiero estudiarte como si fueras la materia, para aprobar la carrera de "Amar al amor de mi vida", y se que todavia me falta mucho por conocer de ti, pero yo siempre escuchare atentamente todo sobre ti </p>
+<p> Y bastaron unos cuantos dias para saber que tu eras el amor de mi vida, solo 3 dias bastaron para darme cuenta de eso, porque no pude resistirme a ti, me derretia por ti, me moria por decirte te amo, por decirte apodos lindos, por finalmente estar en la relacion que tanto soñe estar, y fue hasta el dia que no resisti mas, y te lo pedi, pedi ser tu novio, pedi que fueras mi novia, y pedi estar y compartir caminos, aprender juntos, experimentar juntos, descubrir cosas juntos, y hacer cosas, siempre el uno al lado del otro </p>
+
+    </div>
+
+    <div class="imagen">
+        <img src="https://i.pinimg.com/736x/87/12/a9/8712a962c1cf402c42ae7a14c4ca6867.jpg" alt="Recuerdo">
+    </div>
+
+<div class="bloque">
+
+        <h2>Mirando hacia atras</h2>
+
+        <p>A pasado relativamente poco tiempo estando juntos, pero tengo constancia de que cada momento a tu lado se siente eterno, o por lo menos quisiera que fuera asi, estar eternamente a tu lado, pero a pesar de estar juntos poco tiempo, me di cuenta de que solo quiero que seas tu, de que no quiero a nadie mas en mi vida que no seas tu, mi corazon me pide a gritos que quiere que seas mi esposa, mi cuerpo me suplica estar tocando mi piel, mis ojos me exigen admirar tu belleza, mis oidos necesitan escuchar tu voz, y mi alma me pide estar contigo toda la eternidad, y no se que haria con todas esas peticiones si tu ya no estas, porque adoro esos gritos de necesitar cada parte de ti, porque me hacen dar cuenta, de que aun te sigo amando, y no solo con todo mi corazon, si no que con todas las partes que conforman mi cuerpo, y desearia de que nunca paren por nada del mundo, porque jamas quisiera dejar de amarte </p>   </div>
+
+</div>
+
+<footer>
+
+    ❤️ Gracias por formar parte de esta historia.
+
+</footer>
+
+<script>
+
+for(let i=0;i<40;i++){
+
+    let estrella = document.createElement("div");
+
+    estrella.classList.add("estrella");
+
+    estrella.innerHTML = "✦";
+
+    estrella.style.left = Math.random()*100+"%";
+
+    estrella.style.fontSize =
+    (Math.random()*15+10)+"px";
+
+    estrella.style.animationDuration =
+    (Math.random()*10+10)+"s";
+
+    document.body.appendChild(estrella);
+
+}
+
+</script>
+
+</body>
+</html>

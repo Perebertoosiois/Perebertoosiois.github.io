@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para mi querida Chinchita <3</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:
+    linear-gradient(
+    135deg,
+    #0A2342 0%,
+    #122C5A 40%,
+    #D72638 100%
+    );
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* ENCABEZADO */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(10,35,66,.85);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+nav{
+    max-width:1400px;
+    margin:auto;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:white;
+    font-size:1.5rem;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    position:relative;
+    transition:.3s;
+}
+
+nav ul li a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    height:2px;
+    background:white;
+    transition:.3s;
+}
+
+nav ul li a:hover::after{
+    width:100%;
+}
+
+nav ul li a:hover{
+    color:#ffd6de;
+}
+
+/* CORAZONES FLOTANTES */
+
+.corazon{
+    position:fixed;
+    color:rgba(255,255,255,.1);
+    pointer-events:none;
+    animation:subir linear infinite;
+}
+
+@keyframes subir{
+    from{
+        transform:translateY(110vh);
+    }
+    to{
+        transform:translateY(-100px);
+    }
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.presentacion{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:160px 20px 120px;
+}
+
+.contenido{
+    width:100%;
+    max-width:1100px;
+    text-align:center;
+    animation:entrada 1.5s ease;
+}
+
+/* TITULO */
+
+h1{
+    color:white;
+    font-size:4.5rem;
+    margin-bottom:20px;
+    text-shadow:0 0 20px rgba(255,255,255,.15);
+}
+
+.subtitulo{
+    color:white;
+    font-size:1.35rem;
+    max-width:800px;
+    margin:auto;
+    margin-bottom:50px;
+    font-weight:300;
+}
+
+/* IMAGEN */
+
+.imagen-principal{
+    width:100%;
+    max-width:850px;
+    margin:0 auto 50px auto;
+    overflow:hidden;
+    border-radius:30px;
+    box-shadow:0 15px 50px rgba(0,0,0,.25);
+}
+
+.imagen-principal img{
+    width:100%;
+    display:block;
+    transition:1.2s;
+}
+
+.imagen-principal:hover img{
+    transform:scale(1.08);
+}
+
+/* CARTA */
+
+.carta{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:30px;
+    padding:60px;
+    color:white;
+    text-align:left;
+    line-height:2;
+    box-shadow:0 15px 50px rgba(0,0,0,.15);
+}
+
+.carta p{
+    margin-bottom:18px;
+}
+
+.firma{
+    text-align:center;
+    margin-top:30px;
+    font-size:1.2rem;
+    font-weight:600;
+}
+
+/* FRASE */
+
+.frase{
+    margin-top:40px;
+    padding:40px;
+    border-radius:25px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.1);
+    color:white;
+    font-size:1.4rem;
+    font-style:italic;
+}
+
+/* ANIMACION */
+
+@keyframes entrada{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    h1{
+        font-size:3rem;
+    }
+
+    .subtitulo{
+        font-size:1.1rem;
+    }
+
+    .carta{
+        padding:35px;
+    }
+
+    .frase{
+        font-size:1.1rem;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+
+        <div class="logo"></div>
+
+        <ul>
+	    <li><a href="si.html">Inicio</a></li>
+            <li><a href="comienzo.html">Nuestro Comienzo</a></li>
+            <li><a href="razones.html">Razones</a></li>
+            <li><a href="carta.html">Cartita</a></li>
+
+        </ul>
+
+    </nav>
+</header>
+
+<div class="presentacion">
+
+    <div class="contenido">
+
+        <h1>Para mi querida Chinchita<3</h1>
+
+        <p class="subtitulo">
+            Antes que nada, quiero que sepas que eres el amor de mi vida, y que agradezco cada momento en el que estoy contigo <3
+        </p>
+<div class="imagen-principal">
+            <img src="https://i.pinimg.com/736x/e4/35/5c/e4355c1f2cc4f5bf2d0037458b7e6ba4.jpg" alt="Imagen especial">
+        </div>
+
+        <div class="carta">
+
+            <p>
+                Hola, amorcitoooo
+            </p>
+
+            <p>
+                Esto es un regalito para ti, que esta hecho con mucho cariño, obviamente, aqui quiero expresar parte de mis sentimientos por ti
+		que se que no es todo lo que siento por ti, porque expresarlo jamas podre hacerlo en su totalidad, pero esto es algo que nace de mi corazon,
+		ese corazon que ya tenia telarañas y todo el pedo, pero tu veniste a darle color de nuevo, al igual que a mi vida, viniste a pintar de color todo mi ser, a mejorar mi vida de una manera drastica, dandole un giro de 180°
+		
+		          
+		  </p>
+<p> Mi corazon siente mil y una cosas por ti, aunque a veces no lo demuestre en su totalidad, quiero que sepas que asi es, que mi corazon siempre latira al mismo ritmo que el tuyo, porque estan conectados el uno del otro, porque desde 
+que te conoci, mi corazon se unio con el tuyo, desde que yo te conoci, me envolviste como araña a su presa, con tu hermosa voz que tanto me gusta, con una cara tan dulce como el chocolate, y a mi me gustas tanto o mas que el chocolate, con una forma de ser, que encaja a la perfeccion conmigo, porque yo contigo me siento asi, que eres el unico lugar en el que quiero encajar por el resto de mi vida, donde quiero pertenecer el resto de mi existencia, porque contigo todo lo imposible se hace posible, todo lo dificil se hace facil, y sobre todo, la vida a tu lado tiene sentido </p
+<p> Gracias a que estamos juntos siento que mi vida tomo sentido, rumbo y deber, el sentido de estar a tu lado, el rumbo que tu tomas, tomarlo contigo, y el deber de amarte y protegerte por toda mi vida... Porque la vida sin ti, es como una comida sin sal, como un paraguas en el desierto, como una guitarra sin cuerdas, como un reloj sin manecillas, no tiene sentido, porque tu le diste ese sentido a mi vida... </p>
+<p> Dicen que todas las historias tienen un final, sea feliz o tragico, pero quiero que sepas que nuestra historia de amor no terminara en un "fueron felices por siempre" porque a pesar de que si sea asi, prefiero que diga un "Esta historia continuara", porque no quiero que esta historia termine en esta vida, quiero que termine en miles de miles de vidas mas, porque en cada vida que tengamos, yo te encontrare, y si es que dije eso en una vida pasada, pues creo que ya te encontre de nuevo <3 </p>
+        </div>
+
+        <div class="frase">
+            "De todas las casualidades que pudieron ocurrir,
+            mi favorita fue encontrarte a ti."
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+/* Corazones flotantes */
+
+for(let i=0;i<35;i++){
+
+    let corazon = document.createElement("div");
+
+    corazon.classList.add("corazon");
+
+    corazon.innerHTML = "❤";
+
+    corazon.style.left = Math.random()*100 + "%";
+
+    corazon.style.fontSize =
+    (Math.random()*25+15)+"px";
+
+    corazon.style.animationDuration =
+    (Math.random()*10+8)+"s";
+
+    document.body.appendChild(corazon);
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Quieres ser mi novia?</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+    135deg,
+    #000000,
+    #081b44,
+    #8b0000
+    );
+    overflow:hidden;
+}
+
+.container{
+    text-align:center;
+    color:white;
+    max-width:900px;
+    padding:30px;
+    animation:fadeIn 1.2s ease;
+}
+
+h1{
+    font-size:3rem;
+    margin-bottom:20px;
+    text-shadow:0 0 15px rgba(255,255,255,.4);
+}
+
+p{
+    font-size:1.2rem;
+    margin-bottom:25px;
+    color:#e0e0e0;
+}
+
+.imagen{
+    width:300px;
+    height:300px;
+    object-fit:cover;
+    border-radius:25px;
+    border:4px solid white;
+    box-shadow:0 0 30px rgba(255,255,255,.4);
+    margin-bottom:35px;
+    animation:float 3s ease-in-out infinite;
+}
+
+.botones{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+    transition:.4s;
+}
+
+#si{
+    background:linear-gradient(45deg,#ff1e56,#ff5f6d);
+    color:white;
+    font-size:24px;
+    padding:18px 55px;
+    border-radius:15px;
+    box-shadow:0 0 20px rgba(255,0,80,.5);
+}
+
+#si:hover{
+    transform:scale(1.08);
+}
+
+#no{
+    background:linear-gradient(45deg,#0f3460,#4ea8ff);
+    color:white;
+    font-size:24px;
+    padding:18px 55px;
+    border-radius:15px;
+    box-shadow:0 0 20px rgba(0,140,255,.5);
+}
+
+#no:hover{
+    transform:scale(1.08);
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+.corazones{
+    position:absolute;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+.corazon{
+    position:absolute;
+    color:rgba(255,255,255,.15);
+    animation:subir linear infinite;
+}
+
+@keyframes subir{
+    from{
+        transform:translateY(100vh);
+    }
+    to{
+        transform:translateY(-100px);
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="corazones"></div>
+
+<div class="container">
+
+    <h1>Esto es un regalito para ti, con mucho cariño</h1>
+
+    <p>
+        Quieres verlo? (pon que no)
+    </p>
+
+    <img
+    class="imagen"
+    src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=600"
+    alt="amor">
+
+    <div class="botones">
+        <button id="si">Sí ❤️</button>
+        <button id="no">No 😔</button>
+    </div>
+
+</div>
+
+<script>
+
+let escala = 1;
+
+const botonSi = document.getElementById("si");
+const botonNo = document.getElementById("no");
+
+botonNo.addEventListener("click", () => {
+
+    escala += 0.5;
+
+    botonSi.style.transform = `scale(${escala})`;
+
+    if(escala >= 8){
+        botonSi.style.position = "fixed";
+        botonSi.style.top = "0";
+        botonSi.style.left = "0";
+        botonSi.style.width = "100vw";
+        botonSi.style.height = "100vh";
+        botonSi.style.borderRadius = "0";
+        botonSi.style.fontSize = "70px";
+        botonSi.style.transform = "none";
+        botonSi.innerHTML = "SÍ ❤️";
+        botonNo.style.display = "none";
+    }
+
+});
+
+botonSi.addEventListener("click", () => {
+    window.location.href = "si.html";
+});
+
+
+const corazones = document.querySelector(".corazones");
+
+for(let i=0;i<30;i++){
+
+    const corazon = document.createElement("div");
+
+    corazon.innerHTML = "❤";
+
+    corazon.classList.add("corazon");
+
+    corazon.style.left = Math.random()*100 + "%";
+
+    corazon.style.fontSize =
+    (Math.random()*25 + 15) + "px";
+
+    corazon.style.animationDuration =
+    (Math.random()*10 + 8) + "s";
+
+    corazones.appendChild(corazon);
+}
+
+</script>
+
+</body>
+</html>

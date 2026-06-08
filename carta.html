@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Una Carta Para Ti ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(
+        135deg,
+        #071A35,
+        #132D5A,
+        #7A1F2B
+    );
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(7,26,53,.85);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    z-index:1000;
+}
+
+nav{
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#FFD166;
+}
+
+.hero{
+    min-height:55vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:150px 20px 60px;
+}
+
+.hero h1{
+    font-family:'Dancing Script',cursive;
+    font-size:5rem;
+    color:#FFD166;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    opacity:.9;
+}
+
+.contenedor{
+    max-width:1100px;
+    margin:auto;
+    padding:0 20px 100px;
+}
+
+.carta{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:35px;
+    padding:70px;
+    box-shadow:0 20px 50px rgba(0,0,0,.2);
+    position:relative;
+    animation:fadeUp 1s ease;
+}
+
+.carta::before{
+    content:"❝";
+    position:absolute;
+    top:15px;
+    left:35px;
+    font-size:5rem;
+    color:rgba(255,209,102,.25);
+}
+
+.carta::after{
+    content:"❞";
+    position:absolute;
+    bottom:15px;
+    right:35px;
+    font-size:5rem;
+    color:rgba(255,209,102,.25);
+}
+
+.titulo-carta{
+    text-align:center;
+    font-family:'Dancing Script',cursive;
+    font-size:3rem;
+    color:#FFD166;
+    margin-bottom:40px;
+}
+
+.poesia{
+    max-width:750px;
+    margin:auto;
+    text-align:center;
+}
+
+.poesia p{
+    line-height:2.5;
+    margin-bottom:30px;
+    font-size:1.1rem;
+}
+
+.imagen{
+    margin:70px auto;
+    max-width:800px;
+    overflow:hidden;
+    border-radius:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+.imagen img{
+    width:100%;
+    display:block;
+    transition:1s;
+}
+
+.imagen:hover img{
+    transform:scale(1.05);
+}
+
+.final{
+    text-align:center;
+    margin-top:60px;
+}
+
+.final h2{
+    font-family:'Dancing Script',cursive;
+    font-size:3.5rem;
+    color:#FFD166;
+    margin-bottom:20px;
+}
+
+.final p{
+    max-width:700px;
+    margin:auto;
+    line-height:2;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .carta{
+        padding:40px 25px;
+    }
+
+    .titulo-carta{
+        font-size:2.3rem;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">Cartita</div>
+        <ul>
+	    <li><a href="si.html">Inicio</a></li>
+            <li><a href="comienzo.html">Nuestro Comienzo</a></li>
+            <li><a href="razones.html">Razones</a></li>
+            <li><a href="carta.html">Cartita</a></li>
+
+        </ul>
+
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Una Carta Para Ti </h1>
+
+
+
+</div>
+
+</section>
+
+<div class="contenedor">
+
+<div class="carta">
+
+<h2 class="titulo-carta">
+Amor, mi único sentimiento
+</h2>
+
+<div class="poesia">
+
+<p>
+Amor, mi único sentimiento,<br>
+pienso una vida con tu consentimiento.<br>
+Tu belleza es mi único pensamiento,<br>
+cariño, quédate conmigo.
+</p>
+
+<p>
+Vuélveme loco y quítame este dolor<br>
+que se llama soledad.<br>
+Pretendamos que es nuestro último momento,<br>
+un momento que dure una vida entera.
+</p>
+
+<p>
+Amárrame a esa prisión<br>
+que se llama corazón.<br>
+Tú eres toda mi razón.
+</p>
+
+<p>
+Al hablar contigo, no hablo yo,<br>
+lo que escuchas es mi corazón<br>
+hablando por mí.
+</p>
+
+<p>
+El amor es tan complicado de entender,<br>
+aprendamos de él juntos,<br>
+experimentemos y comprendamos.
+</p>
+
+<p>
+Eres mi única salvación.<br>
+Tengo miedo de morir y volver a nacer<br>
+y que tú no estés ahí.
+</p>
+
+<p>
+Me enferma la soledad.<br>
+Dame un beso, una microdosis,<br>
+camuflémonos y escabullámonos<br>
+hacia la felicidad.
+</p>
+
+<p>
+¿Qué hice para merecerte?<br>
+Ni siquiera sé qué hice,<br>
+pero agradezco cada día<br>
+el haberte encontrado.
+</p>
+
+<p>
+Deseaba perder la noción del tiempo,<br>
+y cuando estoy contigo<br>
+se cumple mi deseo.
+</p>
+
+<p>
+Al escuchar tu voz me das superpoderes,<br>
+me haces sentir entre las nubes.
+</p>
+
+<p>
+Nunca tuve un vicio,<br>
+pero cuando estoy contigo<br>
+siempre quiero más.
+</p>
+
+<p>
+No quiero terminar nunca jamás.<br>
+A las penas ya diles bye,<br>
+porque tristeza conmigo ya no hay.
+</p>
+
+<p>
+¿Cómo llegaste a mi vida?<br>
+Le pedí un deseo a la luz de la mañana,<br>
+y ahora eres tú quien ilumina<br>
+mis días y mis noches.
+</p>
+
+</div>
+
+</div>
+
+<div class="imagen">
+
+<img src="https://i.pinimg.com/736x/c2/05/81/c20581ef93c675dc1de15628a894bb3a.jpg" alt="Imagen especial">
+
+</div>
+
+<div class="final">
+
+<h2>❤️ Para Siempre ❤️</h2>
+
+<p>
+Puede que la distancia exista, puede que los kilómetros estén ahí,
+pero nada de eso cambia lo importante que eres para mí.
+Gracias por cada conversación, cada sonrisa y cada momento compartido.
+</p>
+
+</div>
+
+</div>
+
+</body>
+</html>
